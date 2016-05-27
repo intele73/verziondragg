@@ -1,8 +1,6 @@
-# Verziondragg
+# VerzionDragg
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/verziondragg`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to dropiz! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem
 
 ## Installation
 
@@ -22,15 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Server-Side
 
-## Development
+OmniAuth::Strategies::Verziondragg is simply a Rack middleware. Read the OmniAuth 1.0 docs for detailed instructions: https://github.com/intridea/omniauth.
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Here's a quick example, adding the middleware to a Rails app in config/initializers/omniauth.rb:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :verziondragg_access_token, ENV['CLIENT_KEY'], ENV['CLIENT_SECRET']
+end
+Client-Side
+
+Login via ajax GET/POST call to /auth/facebook_access_token/callback while providing access_token parameter.
+
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/verziondragg. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/intele73/verziondragg. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
