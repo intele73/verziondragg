@@ -26,11 +26,11 @@ OmniAuth::Strategies::Verziondragg is simply a Rack middleware. Read the OmniAut
 
 Here's a quick example, adding the middleware to a Rails app in config/initializers/omniauth.rb:
 
-$Rails.application.config.middleware.use OmniAuth::Builder do
+$ Rails.application.config.middleware.use OmniAuth::Builder do
 
-  $provider :verziondragg_access_token, ENV['CLIENT_KEY'], ENV['CLIENT_SECRET']
+  $ provider :verziondragg_access_token, ENV['CLIENT_KEY'], ENV['CLIENT_SECRET']
 
-$end
+$ end
 
 Client-Side
 
