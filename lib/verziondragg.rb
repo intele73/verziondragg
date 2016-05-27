@@ -1,5 +1,5 @@
 require "verziondragg/version"
-
-module Verziondragg
-  # Your code goes here...
-end
+require 'omniauth/strategies/verziondragg'
+# module Verziondragg
+#   # Your code goes here...
+# end
